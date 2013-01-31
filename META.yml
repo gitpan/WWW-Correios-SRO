@@ -26,4 +26,4 @@ requires:
   URI::file: 0
   parent: 0
   utf8: 0
-version: 0.04
+version: 0.05
