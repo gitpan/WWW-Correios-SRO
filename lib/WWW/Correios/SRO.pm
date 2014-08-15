@@ -22,12 +22,12 @@ use HTML::TreeBuilder;
 use parent 'Exporter';
 our @EXPORT_OK = qw( sro sro_en sro_ok );
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 my $AGENT = 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)';
 my $TIMEOUT = 30;
 
 # retirado de http://www.correios.com.br/servicos/rastreamento/internacional/siglas.cfm
-# as siglas DM, DH e JH existem e são utilizadas pelos correios. Porém não
+# as siglas DM, DH, JH e PE existem e são utilizadas pelos correios. Porém não
 # encontramos o seu significado no site. Deixamos como DESCONHECIDO
 # até conseguirmos uma resposta concreta sobre o significado destas
 # siglas
@@ -67,10 +67,10 @@ my %siglas = (
   DD => 'DEVOLUÇÃO DE DOCUMENTOS',
   DE => 'REMESSA EXPRESSA TALÃO E CARTÃO C/ AR',
   DF => 'E-SEDEX (LÓGICO)',
-  DG => 'DESCONHECIDO',
+  DG => 'DESCONHECIDO (DG)',
   DI => 'REM EXPRES COM AR DIGITAL ITAU',
   DL => 'ENCOMENDA SEDEX (LÓGICO)',
-  DM => 'DESCONHECIDO',
+  DM => 'DESCONHECIDO (DM)',
   DP => 'REM EXPRES COM AR DIGITAL PRF',
   DS => 'REM EXPRES COM AR DIGITAL SANTANDER',
   DT => 'REMESSA ECON.SEG.TRANSITO C/AR DIGITAL',
@@ -127,7 +127,7 @@ my %siglas = (
   JD => 'REMESSA ECONOMICA C/AR DIGITAL',
   JE => 'REMESSA ECONÔMICA C/AR DIGITAL',
   JG => 'REGISTRATO AGÊNCIA (FÍSICO)',
-  JH => 'DESCONHECIDO',
+  JH => 'DESCONHECIDO (JH)',
   JJ => 'REGISTRADO JUSTIÇA',
   JL => 'OBJETO REGISTRADO (LÓGICO)',
   JM => 'MALA DIRETA POSTAL ESPECIAL (LÓGICO)',
@@ -157,6 +157,7 @@ my %siglas = (
   PB => 'ENCOMENDA PAC - NÃO URGENTE',
   PC => 'ENCOMENDA PAC A COBRAR',
   PD => 'ENCOMENDA PAC - NÃO URGENTE',
+  PE => 'DESCONHECIDO (PE)',
   PF => 'PASSAPORTE',
   PG => 'ENCOMENDA PAC (ETIQUETA FÍSICA)',
   PH => 'ENCOMENDA PAC (ETIQUETA LÓGICA)',
